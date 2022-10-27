@@ -1,17 +1,20 @@
 from Pila import Pila
 def Torres_de_Hanoi (n, origen, destino, auxiliar):
-    if n == 1:
-        a = n
-        origen.apilar(a)
-        origen.desapilar()
-        destino.apilar(a)
-        print ("Mover disco 1 de ",origen,"a",destino)
-
-    Torres_de_Hanoi (n-1, origen, auxiliar, destino)
     
-    print ("Mover disco", n, "de la torre", origen, "a la torre", destino)
-    Torres_de_Hanoi (n-1, auxiliar, destino, origen)
-A = Pila()
-B = Pila()
-C = Pila()
-Torres_de_Hanoi (5, A, C, B)
+    if n == 1:
+        
+        destino.apilar(origen.desapilar())
+
+    else:
+        Torres_de_Hanoi(n-1, origen, auxiliar, destino)
+        Torres_de_Hanoi(1, origen, destino, auxiliar)
+        Torres_de_Hanoi(n-1, auxiliar, destino, origen)
+
+    return destino.mostrar()
+
+origen = Pila()
+destino = Pila()
+auxiliar = Pila()
+n = int(input("Ingrese la cantidad de discos: "))
+print("Torres de Hanoi con", n, "discos")
+print (Torres_de_Hanoi(n, origen, destino, auxiliar))
