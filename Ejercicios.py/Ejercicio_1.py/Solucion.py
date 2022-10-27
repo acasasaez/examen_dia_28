@@ -18,6 +18,7 @@ def Torres_de_Hanoi (n, origen, destino, auxiliar): #Empezamos creando la funci√
 #para esto haremos dos llamadas recursivas de nuestra funci√≥n Torres_de_Hanoi
     else: # en caso de que n no sea 1
         Torres_de_Hanoi (n-1, origen, auxiliar, destino) #Llamada recursiva 1
+        
         print ("Mover disco", n, "de", origen, "a", destino)
             
         Torres_de_Hanoi (n-1, auxiliar, destino, origen) #Llamada recursiva 2
