@@ -5,8 +5,4 @@ def regla_Sarrus (matriz):
             
            
     
-matriz = [[1,2,0],
-          [4,0,6]
-        , [7,0,9]]
-print(matriz)
-print (regla_Sarrus(matriz))
+
