@@ -14,5 +14,8 @@ class Pila():
     def desapilar(self):
         return self.items.pop()
 
+    def ult(self):
+        return self.items[-1]
+
     def longitud(self):
         return len(self.items)
