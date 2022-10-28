@@ -1,17 +1,5 @@
 import csv
-#Manolo = Clientes.crear("12345678A", "Manolo", "García")
 
-
-
-mis_datos_1= [["Valoraciones:""Personas:"],
-[0, 58],
-[1,88],
-[2,124],
-[3,132],
-[4,96],
-[5,42]]
-mis_datos_2 =[ ["Media", "Mediana","Desviacion","Varianza"], [0, 0, 0, 0]]
-import csv
 with open("resultados.csv.csv", "w",newline = "") as file: 
     writer =csv.writer(file, delimiter = "," )
     writer.writerow( ["TABLA DE DATOS RESULTADOS"])
@@ -21,17 +9,16 @@ import csv
 import os
 import re
 
-class Cliente (): 
-
-    def __init__(self, nombre, apellido, dni):
+class Nave():
+    def __init__(self, nombre,largo, tripulacion, cantidad_pasajeros ):
         self.nombre = nombre
-        self.apellido = apellido
-        self.dni = dni
+        self.largo = largo
+        self.tripulacion = tripulacion
+        self.cantidad_pasajeros = cantidad_pasajeros
 
-    def __str__(self):
-        return f'Nombre: {self.nombre}, Apellido: {self.apellido}, Dni {self.dni}'
+    
 
-class Clientes ():
+class Naves ():
     lista = []
     with open("Dat.csv", newline='\n') as fichero:
         reader = csv.reader(fichero, delimiter=';')

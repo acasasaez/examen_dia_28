@@ -23,6 +23,15 @@ class Polinomio():
             return Polinomio(coeficientes, self.grado)
         else:
             return "No se pueden restar polinomios de distinto grado"
+    def dividir(self, otro):
+        if self.grado >= otro.grado:
+            coeficientes = []
+            for i in range(self.grado - otro.grado + 1):
+                coeficientes.append(self.coeficientes[i] / otro.coeficientes[0])
+            return Polinomio(coeficientes, self.grado - otro.grado)
+        else:
+            return "No se puede dividir un polinomio de menor grado entre uno de mayor grado"
+        
 
     def __multiplicacion__(self, otro):
         coeficientes = []
@@ -36,5 +45,6 @@ class Polinomio():
             if i != self.grado:
                 a += '+ '
             print(a, end='')
+    
         print()
 
