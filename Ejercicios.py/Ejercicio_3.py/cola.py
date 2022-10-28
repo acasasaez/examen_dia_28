@@ -15,4 +15,6 @@ class Cola():
         return len(self.items)
 
     def __str__(self):
-        return str(self.items)
+        return self.items
+
+
