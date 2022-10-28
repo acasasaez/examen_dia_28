@@ -1,3 +1,4 @@
+#solucion basica
 def regla_Sarrus (matriz):
     if len(matriz) == 3:
         for i in range (len(matriz)):

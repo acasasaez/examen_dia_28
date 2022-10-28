@@ -1,4 +1,5 @@
 from pila import Pila
+
 A = Pila()
 B = Pila()
 C = Pila()
@@ -9,7 +10,6 @@ def pila_inicial(n, origen):
         pila_inicial(n-1, origen)
         
 
-pila_inicial(72, A)
 print(A.__str__())
 
 def Torres_de_Hanoi(n, origen, destino, auxiliar):
@@ -19,5 +19,3 @@ def Torres_de_Hanoi(n, origen, destino, auxiliar):
         print(A.__str__(), B.__str__(), C.__str__(), '##############', sep='\n')
         Torres_de_Hanoi(n-1, auxiliar, destino, origen)
 
-
-Torres_de_Hanoi(72, A, C, B)
