@@ -1,4 +1,4 @@
-#Solución sin Pilas, trabajo con funciones recursivas
+
 def Torres_de_Hanoi (n, origen, destino, auxiliar): #Empezamos creando la función Torres_de_Hanoi que nos devolverá los movimientos que se deben hacer para solucionar
     #el juego de la manera  optima
     #n: número de discos de la torre
@@ -24,3 +24,4 @@ def Torres_de_Hanoi (n, origen, destino, auxiliar): #Empezamos creando la funci�
         Torres_de_Hanoi (n-1, auxiliar, destino, origen) #Llamada recursiva 2
     print("El número de movimientos para resolver este juego es ")
     return 2**n - 1 
+

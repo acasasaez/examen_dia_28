@@ -11,5 +11,6 @@ class Pila ():
         return len(self.items)
     def cima(self):
         return self.items[len(self.items)-1]
-
+    def __str__(self):
+        return self.items
 # Path: Ejercicios.py\pila.py
